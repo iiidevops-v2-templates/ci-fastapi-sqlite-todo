@@ -1,6 +1,6 @@
 include:
   - project: 'iiidevops-templates/ci-template'
-    ref: 'v2.4.1'
+    ref: 'v2.5.4'
     file: 'ci/template.gitlab-ci.yml'
 
 stages:
@@ -16,6 +16,12 @@ Test--SonarQube source code scan:
     CHART_TYPE: normal
   only:
     - master
+
+Test--Anchore SBOM source code scan:
+  variables:
+    iiidevops: anchore-code
+  only:
+    - skip
 
 Test--Checkmarx source code scan:
   variables:
