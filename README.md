@@ -20,7 +20,7 @@ ENV 環境變數名稱3 值3
   * `pipeline_settings.json`是提供給 III DevOps 辨識範本來源資訊請不要更動或刪除
   * `app.blacklist` 是 SonarQube 與 CheckMarx 黑白名單設定檔，可以設定掃描 repo 內哪些目錄或檔案
   * `app.env` 是設定環境變數定義檔，如需對特定分支設定環境變數，請建立 app.env.{分支名稱} Exp. app.env.develop
-  * `sonarqube`資料夾內 `SonarScan` 是 SonarQube Runner 執行的程式，專案如有客制需要可進行修改調整
+  * `sonarqube`資料夾內 `sonar-project.properties` 是 SonarQube 掃描設定，專案如有客制需要可進行修改調整
   * `postman`資料夾內可將您的Postman 的 collection 匯出存放於此，devops系統會以`postman`資料夾內檔案做自動測試
   * `sideex` 資料夾內可將您的SideeX 或是 Rapi 錄製的腳本匯出 json 格式存放於此，devops系統會以`sideex`資料夾內檔案做自動測試
 
